@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manifiesto Vértice EHS 2.0 — Supervivencia Legal y Operativa</title>
+  <meta name="description" content="No somos gestores de firmas. Somos la línea de defensa definitiva entre tu patrimonio y las sanciones federales. Consultoría Senior EHS en México." />
+  <meta property="og:title" content="Manifiesto Vértice EHS 2.0" />
+  <meta property="og:description" content="Supervivencia Legal y Operativa. Consultoría Senior en Seguridad, Salud y Medio Ambiente." />
+  <meta property="og:url" content="https://www.verticeehs.com/manifiesto_vertice_ehs" />
+  <meta property="og:site_name" content="Vértice EHS" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #66df6e;
+      --green-dim: rgba(102,223,110,0.1);
+      --green-border: rgba(102,223,110,0.22);
+      --blue: #aacae9;
+      --bg: #060e20;
+      --surface: #0a1128;
+      --surface-low: #131b2e;
+      --surface-high: #1e293b;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --subtle: #64748b;
+      --outline: rgba(148,163,184,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .label, .nav-tag, .num {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      background: linear-gradient(135deg, rgba(30,41,59,0.55) 0%, rgba(10,17,40,0.78) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--outline);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-back {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--blue);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--green); }
+
+    .nav-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--green-dim);
+      border: 1px solid var(--green-border);
+      padding: 0.28rem 0.75rem;
+      border-radius: 0.25rem;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 5rem;
+      position: relative;
+      background: radial-gradient(ellipse 120% 70% at 50% -10%, rgba(102,223,110,0.07) 0%, transparent 65%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(102,223,110,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102,223,110,0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 75%);
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 75%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      position: relative;
+    }
+    .hero-label::before, .hero-label::after {
+      content: "";
+      display: block;
+      width: 2.5rem;
+      height: 1px;
+    }
+    .hero-label::before { background: linear-gradient(90deg, transparent, var(--green)); }
+    .hero-label::after  { background: linear-gradient(90deg, var(--green), transparent); }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 40px rgba(102,223,110,0.2);
+      position: relative;
+    }
+    .hero h1 .accent { color: var(--green); }
+
+    .hero-sub {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+      position: relative;
+    }
+
+    .hero-desc {
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      color: var(--muted);
+      max-width: 540px;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .hero-scroll {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--subtle);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: 'Space Grotesk', sans-serif;
+      animation: bounce 2.2s infinite;
+      position: relative;
+    }
+
+    /* ── SHARED SECTION ── */
+    .section { padding: 5rem 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .section-wide { padding: 5rem 1.5rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .label {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.65rem;
+    }
+
+    .section-lead {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 540px;
+      line-height: 1.75;
+      margin-bottom: 2.75rem;
+    }
+
+    /* ── PROBLEMA ── */
+    .problema-wrap {
+      background: var(--bg);
+      padding: 5rem 1.5rem;
+      border-top: 1px solid var(--outline);
+      border-bottom: 1px solid var(--outline);
+    }
+
+    .problema-card {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(20,28,45,0.9) 0%, rgba(10,15,32,0.95) 100%);
+      border: 1px solid rgba(251,146,60,0.22);
+      border-radius: 0.375rem;
+      padding: 3rem;
+      box-shadow: 0 0 60px rgba(251,146,60,0.05), inset 0 0 40px rgba(251,146,60,0.02);
+    }
+
+    .problema-card .section-title { margin-bottom: 0.4rem; }
+
+    .problema-lead {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fb923c;
+      margin-bottom: 2rem;
+    }
+
+    .problema-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .problema-item {
+      background: rgba(251,146,60,0.06);
+      border: 1px solid rgba(251,146,60,0.14);
+      border-radius: 0.25rem;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .problema-item-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fb923c;
+      margin-bottom: 0.35rem;
+    }
+
+    .problema-item p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .problema-footer {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--subtle);
+      border-top: 1px solid var(--outline);
+      padding-top: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── ADN ── */
+    .adn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .glass-card {
+      background: linear-gradient(135deg, rgba(30,41,59,0.55) 0%, rgba(10,17,40,0.78) 100%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(148,163,184,0.11);
+      border-radius: 0.375rem;
+      padding: 2rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .glass-card:hover {
+      border-color: var(--green-border);
+      box-shadow: 0 8px 40px rgba(102,223,110,0.05);
+    }
+
+    .card-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--green-dim);
+      border: 1px solid var(--green-border);
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── PILARES ── */
+    .pilares-wrap {
+      background: var(--surface);
+      padding: 5rem 1.5rem;
+    }
+
+    .pilares-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .pilar-card {
+      background: linear-gradient(135deg, rgba(19,27,46,0.9) 0%, rgba(6,14,32,0.95) 100%);
+      border: 1px solid rgba(148,163,184,0.07);
+      border-radius: 0.375rem;
+      padding: 1.75rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .pilar-card:hover {
+      border-color: var(--green-border);
+      background: linear-gradient(135deg, rgba(30,41,59,0.7) 0%, rgba(10,17,40,0.9) 100%);
+    }
+
+    .num {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      opacity: 0.65;
+      min-width: 2.5rem;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .pilar-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .pilar-text {
+      font-size: 0.87rem;
+      color: var(--subtle);
+      line-height: 1.65;
+    }
+
+    /* ── TECH ── */
+    .tech-wrap { padding: 5rem 1.5rem; background: var(--bg); }
+
+    .tech-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .tech-items { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .tech-item {
+      border-left: 2px solid var(--green);
+      padding: 0.9rem 1.4rem;
+      background: rgba(102,223,110,0.03);
+      transition: background 0.2s;
+    }
+    .tech-item:hover { background: rgba(102,223,110,0.06); }
+
+    .tech-item-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.3rem;
+    }
+
+    .tech-item p { font-size: 0.87rem; color: var(--muted); line-height: 1.65; }
+
+    .tech-visual {
+      background: linear-gradient(135deg, rgba(19,27,46,0.8) 0%, rgba(6,14,32,0.9) 100%);
+      border: 1px solid rgba(102,223,110,0.1);
+      border-radius: 0.375rem;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: inset 0 0 40px rgba(102,223,110,0.03);
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 0.22rem;
+    }
+
+    .stat-divider { height: 1px; background: var(--outline); }
+
+    /* ── ARSENAL ── */
+    .arsenal-wrap { background: var(--surface); padding: 5rem 1.5rem; }
+
+    .arsenal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .arsenal-block {
+      background: linear-gradient(135deg, rgba(19,27,46,0.9) 0%, rgba(6,14,32,0.95) 100%);
+      border: 1px solid rgba(148,163,184,0.07);
+      border-radius: 0.375rem;
+      padding: 2rem;
+    }
+
+    .arsenal-block-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(170,202,233,0.1);
+    }
+
+    .arsenal-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .arsenal-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.45rem;
+      box-shadow: 0 0 6px rgba(102,223,110,0.45);
+    }
+
+    /* ── CAPACITACIÓN ── */
+    .cap-wrap { padding: 5rem 1.5rem; background: var(--bg); }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .cap-card {
+      background: linear-gradient(135deg, rgba(19,27,46,0.85) 0%, rgba(6,14,32,0.9) 100%);
+      border: 1px solid rgba(148,163,184,0.07);
+      border-radius: 0.375rem;
+      padding: 1.5rem;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .cap-card:hover {
+      border-color: var(--green-border);
+      box-shadow: 0 4px 24px rgba(102,223,110,0.05);
+    }
+
+    .cap-norm {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      background: var(--green-dim);
+      border: 1px solid var(--green-border);
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 0.2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .cap-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .cap-text { font-size: 0.82rem; color: var(--subtle); line-height: 1.55; }
+
+    /* ── CTA ── */
+    .cta-wrap {
+      padding: 6rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      border-top: 1px solid rgba(102,223,110,0.09);
+    }
+
+    .cta-inner { max-width: 680px; margin: 0 auto; }
+
+    .cta-title {
+      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .cta-title .accent {
+      color: var(--green);
+      text-shadow: 0 0 30px rgba(102,223,110,0.28);
+    }
+
+    .cta-desc {
+      font-size: 0.98rem;
+      color: var(--subtle);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: linear-gradient(135deg, #66df6e 0%, #22b14c 100%);
+      color: #060e20;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.9rem 2rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      transition: box-shadow 0.25s, transform 0.25s;
+      box-shadow: 0 8px 32px rgba(102,223,110,0.22);
+    }
+    .cta-btn:hover {
+      box-shadow: 0 12px 40px rgba(102,223,110,0.32);
+      transform: translateY(-2px);
+    }
+
+    .cta-contact {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    .cta-contact-item {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.83rem;
+      color: var(--subtle);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .cta-contact-item a { color: var(--blue); text-decoration: none; transition: color 0.2s; }
+    .cta-contact-item a:hover { color: var(--green); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 1.5rem;
+      border-top: 1px solid rgba(148,163,184,0.05);
+      text-align: center;
+    }
+    footer p {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.7rem;
+      color: #1e293b;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .tech-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .arsenal-grid { grid-template-columns: 1fr; }
+      .problema-card { padding: 2rem 1.25rem; }
+    }
+
+    /* ── ANIMACIÓN ── */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="https://www.verticeehs.com" class="nav-back">← verticeehs.com</a>
+      <span class="nav-tag">Manifiesto 2.0</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <span class="hero-label">Consultoría Senior EHS · México</span>
+    <h1>Manifiesto <span class="accent">Vértice EHS</span> 2.0</h1>
+    <p class="hero-sub">Supervivencia Legal y Operativa</p>
+    <p class="hero-desc">No somos gestores de firmas. Somos la línea de defensa definitiva entre tu patrimonio y las sanciones federales.</p>
+    <div class="hero-scroll">
+      <span>Leer manifiesto</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 3v10M3 8l5 5 5-5" stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- EL PROBLEMA -->
+  <div class="problema-wrap">
+    <div class="problema-card">
+      <span class="label">El problema</span>
+      <h2 class="section-title">La Ilusión del Cumplimiento</h2>
+      <p class="problema-lead">La seguridad en papel es un suicidio financiero disfrazado.</p>
+      <div class="problema-grid">
+        <div class="problema-item">
+          <p class="problema-item-title">Multas Millonarias</p>
+          <p>Las sanciones de la STPS superan los <strong>$2.8 millones de pesos</strong> por incumplimiento.</p>
+        </div>
+        <div class="problema-item">
+          <p class="problema-item-title">Responsabilidad Legal</p>
+          <p>El Art.&nbsp;132 (LFT) y el RFSHMAT exigen responsabilidad directa y <strong>penal</strong> a los representantes legales.</p>
+        </div>
+        <div class="problema-item">
+          <p class="problema-item-title">El Riesgo Real</p>
+          <p>Una carpeta falsa no detiene un accidente fatal ni evita la <strong>clausura de tu planta</strong>.</p>
+        </div>
+      </div>
+      <p class="problema-footer">Si buscas fingir que cumples — no somos para ti.</p>
+    </div>
+  </div>
+
+  <!-- ADN -->
+  <section class="section">
+    <span class="label">Nuestro ADN</span>
+    <h2 class="section-title">Experiencia de Trinchera</h2>
+    <p class="section-lead">Hablamos tu idioma porque nuestra genética es operativa. El mercado está lleno de teóricos. Nosotros no.</p>
+    <div class="adn-grid">
+      <div class="glass-card">
+        <div class="card-icon">⚙️</div>
+        <h3 class="card-title">Líderes de Piso</h3>
+        <p class="card-text">Nuestros ingenieros han sudado la camiseta como Gerentes EHS en industrias de alto riesgo y manufactura.</p>
+      </div>
+      <div class="glass-card">
+        <div class="card-icon">🏛️</div>
+        <h3 class="card-title">Autoridad Normativa</h3>
+        <p class="card-text">Sabemos cómo aplicar <em>empatía táctica</em> frente a inspectores de STPS, PROFEPA y Protección Civil.</p>
+      </div>
+      <div class="glass-card">
+        <div class="card-icon">🔬</div>
+        <h3 class="card-title">Ingeniería Aplicada</h3>
+        <p class="card-text">Resolvemos hallazgos críticos antes de que muten en multas o paros de línea.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 PILARES -->
+  <div class="pilares-wrap">
+    <div class="section-inner">
+      <span class="label">Metodología</span>
+      <h2 class="section-title">Los 5 Pilares de la Experiencia Vértice</h2>
+      <p class="section-lead">Cómo transformamos el rigor normativo en blindaje operativo.</p>
+      <div class="pilares-grid">
+        <div class="pilar-card">
+          <span class="num">01</span>
+          <div>
+            <h3 class="pilar-title">Rigor Pragmático</h3>
+            <p class="pilar-text">Traducimos las exigencias más densas de la STPS (NOM-030, NOM-019) en soluciones ágiles y a prueba de errores.</p>
+          </div>
+        </div>
+        <div class="pilar-card">
+          <span class="num">02</span>
+          <div>
+            <h3 class="pilar-title">Transparencia Radical</h3>
+            <p class="pilar-text">Te entregamos la radiografía exacta de tus riesgos penales y administrativos. Etiquetamos las fallas sin anestesia.</p>
+          </div>
+        </div>
+        <div class="pilar-card">
+          <span class="num">03</span>
+          <div>
+            <h3 class="pilar-title">Democratización de la Seguridad</h3>
+            <p class="pilar-text">El estándar Fortune 500 adaptado a tu realidad financiera. Cada peso es un escudo contra la quiebra.</p>
+          </div>
+        </div>
+        <div class="pilar-card">
+          <span class="num">04</span>
+          <div>
+            <h3 class="pilar-title">Convergencia Operativa</h3>
+            <p class="pilar-text">Diseñamos controles de ingeniería que no entorpecen al operador, sino que estandarizan el trabajo rápido y seguro.</p>
+          </div>
+        </div>
+        <div class="pilar-card">
+          <span class="num">05</span>
+          <div>
+            <h3 class="pilar-title">Prevención Evolutiva</h3>
+            <p class="pilar-text">Te preparamos para la autogestión y certificaciones federales de élite (PASST, Distintivo ELSSA).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH EHS 4.0 -->
+  <div class="tech-wrap">
+    <div class="tech-inner">
+      <div>
+        <span class="label">Ventaja Diferencial</span>
+        <h2 class="section-title">Tecnología EHS 4.0</h2>
+        <p class="section-lead">La gestión EHS en hojas de cálculo está muerta. Te damos el control absoluto de tu certidumbre legal.</p>
+        <div class="tech-items">
+          <div class="tech-item">
+            <p class="tech-item-title">Automatización Legal</p>
+            <p>Tus matrices, estudios (NOM-036) y cumplimiento a un clic de distancia, encriptados y 100% auditables.</p>
+          </div>
+          <div class="tech-item">
+            <p class="tech-item-title">IA Preventiva</p>
+            <p>Análisis de patrones para optimizar tu IPERC. Neutralizamos la falla antes del accidente, protegiendo tu prima de siniestralidad.</p>
+          </div>
+          <div class="tech-item">
+            <p class="tech-item-title">Seguimiento de Ciclo Completo</p>
+            <p>KPIs duros. Medimos y calibramos en campo hasta que el riesgo está fulminado de raíz.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tech-visual">
+        <div>
+          <p class="stat-num">$2.8M</p>
+          <p class="stat-label">Multa máxima STPS por incumplimiento</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <p class="stat-num">100%</p>
+          <p class="stat-label">Auditable ante inspección federal</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div>
+          <p class="stat-num">0</p>
+          <p class="stat-label">Paros de línea no gestionados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARSENAL -->
+  <div class="arsenal-wrap">
+    <div class="section-inner">
+      <span class="label">Servicios</span>
+      <h2 class="section-title">Nuestro Arsenal EHS Integral</h2>
+      <p class="section-lead">Ingeniería, Cumplimiento y Protección Civil. No improvisamos.</p>
+      <div class="arsenal-grid">
+        <div class="arsenal-block">
+          <p class="arsenal-block-title">Estudios y Mediciones · Equipos Calibrados</p>
+          <ul class="arsenal-list">
+            <li class="arsenal-item"><span class="dot"></span>Iluminación (NOM-025-STPS)</li>
+            <li class="arsenal-item"><span class="dot"></span>Ruido Laboral (NOM-011-STPS)</li>
+            <li class="arsenal-item"><span class="dot"></span>Condiciones Térmicas (NOM-015-STPS)</li>
+            <li class="arsenal-item"><span class="dot"></span>Vibraciones (NOM-024-STPS)</li>
+            <li class="arsenal-item"><span class="dot"></span>Verificación de Tierras Físicas (NOM-022-STPS)</li>
+          </ul>
+        </div>
+        <div class="arsenal-block">
+          <p class="arsenal-block-title">Gestión Normativa y Riesgos</p>
+          <ul class="arsenal-list">
+            <li class="arsenal-item"><span class="dot"></span>Programa de Seguridad y Salud (NOM-030-STPS)</li>
+            <li class="arsenal-item"><span class="dot"></span>Pruebas y Exámenes No Destructivos (END)</li>
+            <li class="arsenal-item"><span class="dot"></span>Recipientes Sujetos a Presión</li>
+            <li class="arsenal-item"><span class="dot"></span>Comisiones de Seguridad e Higiene</li>
+            <li class="arsenal-item"><span class="dot"></span>Programas Internos de Protección Civil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAPACITACIÓN -->
+  <div class="cap-wrap">
+    <div class="section-inner">
+      <span class="label">Formación Estratégica</span>
+      <h2 class="section-title">Capacitación con Validez DC-3</h2>
+      <p class="section-lead">Personal entrenado es personal que no detiene la producción. Instructores certificados ante la STPS.</p>
+      <div class="cap-grid">
+        <div class="cap-card">
+          <span class="cap-norm">NOM-009</span>
+          <h3 class="cap-title">Trabajos en Alturas</h3>
+          <p class="cap-text">Sistemas anticaídas y rescate.</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-norm">NOM-033</span>
+          <h3 class="cap-title">Espacios Confinados</h3>
+          <p class="cap-text">Atmósferas peligrosas y permisos de trabajo.</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-norm">NOM-029</span>
+          <h3 class="cap-title">Instalaciones Eléctricas</h3>
+          <p class="cap-text">Bloqueo de energías (LOTO).</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-norm">SGA</span>
+          <h3 class="cap-title">Sustancias Químicas</h3>
+          <p class="cap-text">Almacenamiento y Sistema Globalmente Armonizado.</p>
+        </div>
+        <div class="cap-card">
+          <span class="cap-norm">OP-SEG</span>
+          <h3 class="cap-title">Montacargas y Maquinaria</h3>
+          <p class="cap-text">Operación segura en planta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="cta-wrap">
+    <div class="cta-inner">
+      <h2 class="cta-title">La seguridad de tu planta<br/>ya no puede depender <span class="accent">de la suerte.</span></h2>
+      <p class="cta-desc">Nuestro único compromiso es garantizar que tu gente regrese viva a casa y tu empresa opere con total impunidad legal. Tienes la radiografía del riesgo. La decisión de blindar tu patrimonio ahora está en tus manos.</p>
+      <a href="https://www.verticeehs.com" class="cta-btn" target="_blank" rel="noopener noreferrer">
+        Hablemos de Ingeniería →
+      </a>
+      <div class="cta-contact">
+        <span class="cta-contact-item">🌐 <a href="https://www.verticeehs.com" target="_blank" rel="noopener noreferrer">www.verticeehs.com</a></span>
+        <span class="cta-contact-item">📍 Puebla, México · Cobertura Nacional</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Vértice EHS · Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
